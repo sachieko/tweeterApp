@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <!-- User Header CSS-->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <!-- New Tweet CSS-->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     
 
     <!-- External JS -->
@@ -31,7 +33,7 @@
   <body class="body-class">
     <!-- Top nav bar (fixed) -->
     <nav class="nav-bar">
-      <span>tweeter</span>
+      <span class="bungee">tweeter</span>
       <div class="tweet-menu">
         <div><b>Write</b> a new tweet</div>
         <i class="fa-solid fa-angles-down"></i>
@@ -48,14 +50,16 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <span class="bold">What are you humming about?</span>
-      <hr>
-      <p> Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
-        De carne lumbering animata corpora quaeritis. Summus brains sit​, morbo vel 
-        maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless 
-        mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus 
-        comedat cerebella viventium.</p>
-      <p> Ipsum loret derat I do not speak latin</p>
+      <section class="new-tweet">
+        <form method="post" action="/tweets">
+          <label for="tweet-test" class="bold">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+            <div class="row apart">
+              <button class="bungee btn tweet-btn" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-test">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
