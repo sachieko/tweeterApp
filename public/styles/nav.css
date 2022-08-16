@@ -1,0 +1,31 @@
+.nav-bar {
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.nav-bar .tweet-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.nav-bar span {
+  font-family:  'Bungee', sans-serif;
+  margin-left: 1.5em;
+}
+
+.fa-angles-down {
+  color: orangered;
+}
+
+.fa-angles-down:hover {
+  color: red;
+}

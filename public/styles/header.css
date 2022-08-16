@@ -1,0 +1,17 @@
+.user-header {
+  display: flex;
+  background-color: #5c008a;
+  background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+  height: 520px;
+  font-weight: lighter;
+}
+
+.bold {
+  font-weight: bold;
+}
