@@ -21,10 +21,6 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.nav-bar {
-  font-family: 'Bungee', sans-serif;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -36,6 +32,26 @@ html {
 hr {
   display: flex;
   width: 80%;
+}
+
+.bungee {
+  font-family: "Bungee", sans-serif;
+}
+
+.btn {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: 0px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 /*

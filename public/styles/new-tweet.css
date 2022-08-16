@@ -1,0 +1,9 @@
+.tweet-btn {
+  height: 2em;
+  width: 5em;
+}
+
+.apart {
+  display: flex;
+  justify-content: space-between;
+}
