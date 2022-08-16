@@ -1,9 +1,23 @@
-.tweet-btn {
-  height: 2em;
-  width: 5em;
+.tweet-text {
+  background-color: transparent;
+  border: 0 none;
 }
 
-.apart {
+.new-tweet {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+.counter {
+  display: flex;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2em;
+}
+
+.tweet-counter {
+  padding-top: 0.5em;
 }

@@ -42,6 +42,7 @@ hr {
   background-color: #4056A1;
   color: #FFFFFF;
   border: 0px;
+  text-align: center;
 }
 
 .row {
@@ -52,6 +53,10 @@ hr {
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.apartv {
+  justify-content: space-between;
 }
 
 /*
