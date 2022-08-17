@@ -52,9 +52,9 @@
     <main class="container">
       <section class="new-tweet">
         <form method="post" action="/tweets">
-          <div class="underline">
+          <div class="column">
             <label for="tweet-text" class="bold">What are you humming about?</label>
-            <textarea rows="1" name="text" id="tweet-text"></textarea>
+            <textarea class="underline" rows="1" name="text" id="tweet-text"></textarea>
           </div>
           <div class="row apartv tweet-counter">
             <button class="bungee btn tweet-btn" type="submit">Tweet</button>
@@ -63,5 +63,6 @@
         </form>
       </section>
     </main>
+    <script src="scripts/composer-char-counter.js"></script>
   </body>
 </html>

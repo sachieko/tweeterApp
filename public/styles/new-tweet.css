@@ -1,6 +1,12 @@
 #tweet-text {
   background-color: transparent;
-  border: 0 none;
+  border: 0px;
+  border-bottom: 0.2em solid black;
+  resize: none;
+}
+
+#tweet-text:hover {
+  resize: both;
 }
 
 .new-tweet {
@@ -14,10 +20,10 @@
 }
 
 .underline {
-  border-bottom: 1px solid black;
   padding-bottom: 0.2em;
 }
 
 .tweet-counter {
   padding-top: 0.5em;
+  font-family: "Bungee", sans-serif;
 }
