@@ -3,16 +3,21 @@
   border: 0px;
   border-bottom: 0.2em solid black;
   resize: none;
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+  box-shadow: none;
 }
 
 #tweet-text:hover {
-  resize: both;
+  resize: none;
 }
 
 .new-tweet {
   display: flex;
   flex-direction: column;
   padding-top: 1em;
+  justify-content: center;
 }
 
 .counter {
