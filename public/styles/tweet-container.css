@@ -1,5 +1,5 @@
 .tweet-container {
-  border: 0.2em solid black;
+  border: 0.2em solid #545149;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 2em;
@@ -30,7 +30,7 @@ font-weight: bolder;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.alias {
+.handle {
   justify-self: end;
   color: #8DA7B4;
 }
@@ -55,4 +55,8 @@ font-weight: bolder;
 
 .tweet-container footer i.fa-solid:hover {
 color: #ffee00
+}
+
+.tweet-container a {
+  text-decoration: none;
 }
