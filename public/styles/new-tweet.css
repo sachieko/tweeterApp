@@ -10,6 +10,11 @@
   padding-top: 1em;
 }
 
+.tweet-btn:focus {
+  outline: 0.2em solid #bacfeb;
+  outline-offset: 0.05em;
+}
+
 #tweet-text:hover {
   resize: none;
 }
@@ -32,4 +37,12 @@
 .tweet-counter {
   padding-top: 0.5em;
   font-family: "Bungee", sans-serif;
+}
+
+.error-msg {
+  display: none;
+  color: crimson;
+  border: 0.2em solid crimson;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0.5em;
 }
