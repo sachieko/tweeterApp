@@ -8,7 +8,6 @@
 .tweet-article:hover {
 -webkit-box-shadow: 5px 5px 0px 2px #8DA7B4; 
 box-shadow: 5px 5px 0px 2px #8DA7B4;
-font-weight: bolder;
 }
 
 .after {
@@ -30,9 +29,13 @@ font-weight: bolder;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.handle {
+.tweet-article .handle {
   justify-self: end;
   color: #8DA7B4;
+}
+
+.tweet-article:hover .handle {
+  font-weight: bolder;
 }
 
 .display-name {
