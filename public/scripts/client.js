@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -7,10 +8,11 @@ $(() => {
   // Used to date timestamps as how long ago they posted.
   $("time.timeago").timeago();
 
-  // Tweet element templates
-  const createTweetElement = function (tweetObj) {
+  // Tweet element templates with XSS protection. This would need to go on usernames too.
+  const createTweetElement = function(tweetObj) {
     const user = tweetObj.user;
     const timeCreated = new Date(tweetObj.created_at);
+    let content = tweetObj.content.text;
     const $tweetHTML = $(`
     <article class="tweet-article">
     <header class="tweet-h">
@@ -19,7 +21,7 @@ $(() => {
       </div>
       <span class="handle">${user.handle}</span>
     </header>
-      <p class="tweetp">${tweetObj.content.text}</p>
+      <p class="tweetp"></p>
     <footer class="row apartv">
     <time class="timeago" datetime="${timeCreated.toISOString()}">${$.timeago(timeCreated)}</time> 
       <div>
@@ -28,19 +30,20 @@ $(() => {
     </footer>
     </article>
     `);
+    $($tweetHTML).children('.tweetp').text(content); // Prevents XSS
     return $tweetHTML;
   };
 
   // Prepends each tweet object in the tweet array to the tweet container section.
-  const renderTweets = function (tweetArr) {
+  const renderTweets = function(tweetArr) {
     for (const tweet of tweetArr) {
       $('#tweet-container').prepend(createTweetElement(tweet));
     }
   };
 
   // Sends an AJAX request to load the database again.
-  const loadTweets = function () {
-    $.get("/tweets", function (data) {
+  const loadTweets = function() {
+    $.get("/tweets", function(data) {
       $('#tweet-container').empty(); // Doing this here prevents duplicate tweets from being listed.
       renderTweets(data);
     });
@@ -49,7 +52,7 @@ $(() => {
   loadTweets();
 
   // On form submit, if submit meets requirements we empty the tweets before loading them again.
-  $('.new-tweet form').on('submit', function (event) {
+  $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
     const inputText = $('#tweet-text').val();
     if (!inputText) {
