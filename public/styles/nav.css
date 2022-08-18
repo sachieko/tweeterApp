@@ -22,10 +22,10 @@
   margin-left: 1.5em;
 }
 
-.fa-angles-down {
+.nav-bar .fa-angles-down {
   color: orangered;
 }
 
-.fa-angles-down:hover {
-  color: red;
+.nav-bar .fa-angles-down:hover {
+  color: magenta;
 }
