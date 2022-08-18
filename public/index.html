@@ -53,7 +53,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method="post" action="/tweets">
+        <form>
           <div class="column">
             <label for="tweet-text" class="bold">What are you humming about?</label>
             <textarea class="underline" rows="2" name="text" id="tweet-text"></textarea>
@@ -64,35 +64,7 @@
           </div>
         </form>
       </section>
-      <section class="tweet-container">
-        <header class="tweet-h">
-          <div>
-            <i class="fa-solid fa-atom fa-2xl"></i><span class="display-name">Einstein</span>
-          </div>
-          <span class="handle">@MCsquared</span>
-        </header>
-          <p class="tweetp"><a href="https://en.wikipedia.org/wiki/Stephen_Hawking">@StephenHawking8</a> I'm the giant whose shoulders you'd have stood on if you could stand, let me give you a brief history of the back of my hand!</p>
-        <footer class="row apartv">
-          <span>5 days ago</span> 
-          <div>
-            <i class="fa-solid fa-flag fa-sm"></i> <i class="fa-solid fa-retweet fa-sm"></i> <i class="fa-solid fa-heart fa-sm"></i>
-          </div>
-        </footer>
-      </section>
-      <section class="tweet-container">
-        <header class="tweet-h">
-          <div>
-            <i class="fa-solid fa-explosion fa-2xl"></i><span class="display-name">Stephen</span>
-          </div>
-          <span class="handle">@Hawkster</span>
-        </header>
-          <p class="tweetp"><a href="https://en.wikipedia.org/wiki/Albert_Einstein">@MCsquared</a> There are 10<sup>78</sup> billion particles in the universe that we can observe, your mama took the ugly ones and put them into one nerd.</p>
-        <footer class="row apartv">
-          <span>6 days ago</span> 
-          <div>
-            <i class="fa-solid fa-flag fa-sm"></i> <i class="fa-solid fa-retweet fa-sm"></i> <i class="fa-solid fa-heart fa-sm"></i>
-          </div>
-        </footer>
+      <section id="tweet-container">
       </section>
     </main>
     <script src="scripts/composer-char-counter.js"></script>
