@@ -51,20 +51,23 @@ $(() => {
   // Initial load of database once document is loaded.
   loadTweets();
 
-  // On form submit, if submit meets requirements we empty the tweets before loading them again.
+  //
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
-    const inputText = $('#tweet-text').val();
-    if (!inputText) {
-      return alert('Your tweet was empty!');
-    }
-    if (inputText.length > 140) {
-      return alert('Your tweet exceeds the character limit!');
-    }
-    const newTweetContent = $(this).serialize();
-    $.post("/tweets/", newTweetContent, loadTweets)
-      .then(() => {
-        $('#tweet-text').val('');
-      });
+    $('.error-msg').slideUp('slow', () => { // Stop user from seeing error msg swap.
+      const inputText = $('#tweet-text').val();
+      if (!inputText) {
+        return $('.error-msg').text('😢 You tried to share nothing. Tragically, you cannot do that!').slideDown('slow');
+      }
+      if (inputText.length > 140) {
+        return $('.error-msg').text('😡 Please respect the 140 character limit! Ain\'t no one got time to read all that! 😡').slideDown('slow');
+      }
+      const newTweetContent = $(this).serialize();
+      $.post("/tweets/", newTweetContent, loadTweets)
+        .then(() => {
+          $('#tweet-text').val(''); // Reset textarea on good tweet.
+          $(this.counter).val(140); // Reset counter on good tweet.
+        });
+    });
   });
 });
