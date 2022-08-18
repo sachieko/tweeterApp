@@ -1,11 +1,11 @@
-.tweet-container {
+.tweet-article {
   border: 0.2em solid #545149;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 2em;
 }
 
-.tweet-container:hover {
+.tweet-article:hover {
 -webkit-box-shadow: 5px 5px 0px 2px #8DA7B4; 
 box-shadow: 5px 5px 0px 2px #8DA7B4;
 font-weight: bolder;
@@ -40,23 +40,23 @@ font-weight: bolder;
   font-weight: normal;
 } 
 
-.tweet-container footer {
+#tweet-container footer {
   font-weight: bolder;
   font-size: smaller;
   padding-left: 1em;
   padding-right: 1em;
 }
 
-.tweet-container footer i.fa-solid {
+#tweet-container footer i.fa-solid {
   color: #4056A1;
   padding-left: 0.2em;
   padding-right: 0.2em;
 }
 
-.tweet-container footer i.fa-solid:hover {
+#tweet-container footer i.fa-solid:hover {
 color: #ffee00
 }
 
-.tweet-container a {
+#tweet-container a {
   text-decoration: none;
 }
