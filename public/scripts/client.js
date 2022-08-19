@@ -55,12 +55,6 @@ $(() => {
   // Initial load of database once document is loaded.
   loadTweets();
 
-  $('.nav-bar .tweet-menu').on('click', function(event) {
-    event.preventDefault();
-    $('#new-tweet').slideToggle('slow');
-    $('#new-tweet textarea').focus();
-  });
-
   // Will check input for validation and then post the new tweet and reset the textarea and counter
   $('#new-tweet form').on('submit', function(event) {
     event.preventDefault();
