@@ -35,10 +35,10 @@ body main.container {
 body .btn-up {
   display: none;
   color: #FFFFFF;
-  font-size: 19px;
-  line-height: 19px;
-  padding: 19px;
-  border-radius: 50px;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 1em;
+  border-radius: 2em;
   text-decoration: none;
   background-color: #350066;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
