@@ -2,18 +2,15 @@
 
 .tweet-article {
   border: 0.2em solid $body-color;
-  padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   margin-top: 2em;
+  padding: 1em;
   font-family: $body-font;
-  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: bolder;
   &:hover {
     -webkit-box-shadow: 5px 5px 0px 2px $boxshadow-color; 
     box-shadow: 5px 5px 0px 2px $boxshadow-color;
-
-    .handle {
-    font-weight: bolder;
-    }
   }
 
   .tweetp {
@@ -43,6 +40,7 @@
   .display-name {
     align-self: center;
     font-weight: normal;
+    padding-left: 1em;
   } 
   .icons {
     white-space: no-wrap;
@@ -69,13 +67,16 @@
   }
 }
 
-@media only screen and (max-width: 330px) { // for very small screens
+@media only screen and (max-width: 300px) { // for very small screens
   .tweet-article {
     font-size: 0.8em;
+    .tweet-h {
+      display: flex;
+      flex-direction: column;
+    }
 
     img {
-      height: 3em;
-      width: 2.3em;
+      display: none;
     }
   }
 }
@@ -83,7 +84,9 @@
 @media only screen and (min-width: 768px) {
   .tweet-article {
     font-size: 1em;
-
+    .display-name {
+      font-weight: bolder;
+    }
     img {
       height: 4em;
       width: 3em;
@@ -92,5 +95,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-
+  .tweet-article {
+    font-size: 1.2em;
+  }
 }
