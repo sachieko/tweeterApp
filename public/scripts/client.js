@@ -47,7 +47,10 @@ $(() => {
     $.get("/tweets", function(data) {
       $('#tweet-container').empty(); // Doing this here prevents duplicate tweets from being listed.
       renderTweets(data);
-    });
+    })
+      .fail(() => {
+        console.error('Error loading tweets occurred!');
+      });
   };
   // Initial load of database once document is loaded.
   loadTweets();
@@ -69,10 +72,13 @@ $(() => {
       if (inputText.length > 140) {
         return $('.error-msg').text('😡 Please respect the 140 character limit! Ain\'t no one got time to read all that! 😡').slideDown('slow');
       }
-      const newTweetContent = $(this).serialize();
+      const newTweetContent = $(this).serialize(); // Serialize the data in the form for the server end
       $('#tweet-text').val(''); // Reset textarea on good tweet.
-      $(this.counter).val(140);
-      $.post("/tweets/", newTweetContent, loadTweets);
+      $(this.counter).val(140); // Reset counter on good tweet.
+      $.post("/tweets/", newTweetContent, loadTweets) // Post the tweet.
+        .fail(function() {
+          console.error('Error occured! Tweet could not be posted');
+        });
     });
   });
 });
