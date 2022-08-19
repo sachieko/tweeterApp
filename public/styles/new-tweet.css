@@ -10,7 +10,21 @@
   padding-top: 1em;
 }
 
-.tweet-btn {
+#new-tweet {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  justify-content: center;
+}
+#new-tweet #tweet-text:hover {
+  resize: none;
+}
+#new-tweet .tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#new-tweet .tweet-btn {
   font-family: "Bungee", sans-serif;
   margin-top: 0.5em;
   background-color: #4056A1;
@@ -19,35 +33,15 @@
   border: 0px;
   height: 1.5em;
 }
-
-.tweet-btn:focus {
+#new-tweet .tweet-btn:focus {
   outline: 0.2em solid #8DA7B4;
   outline-offset: 0.05em;
 }
-
-#tweet-text:hover {
-  resize: none;
-}
-
-.new-tweet {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1em;
-  justify-content: center;
-}
-
-.tweet-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.counter {
+#new-tweet .counter {
   font-family: "Bungee", sans-serif;
   margin-top: 0.5em;
 }
-
-.error-msg {
+#new-tweet .error-msg {
   display: none;
   color: crimson;
   border: 0.2em solid crimson;
@@ -56,7 +50,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .new-tweet {
+  #new-tweet {
     padding-top: 10%;
     font-size: 1.8em;
   }
