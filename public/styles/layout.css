@@ -33,6 +33,7 @@ body main.container {
   margin: 0 auto;
 }
 body .btn-up {
+  display: none;
   color: #FFFFFF;
   font-size: 19px;
   line-height: 19px;
@@ -42,8 +43,9 @@ body .btn-up {
   background-color: #350066;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 5vh;
+  right: 2vw;
+  /* 100 viewport height minus the height of the button and the height of the bottom position */
 }
 body .btn-up:hover {
   background-color: #4056A1;
