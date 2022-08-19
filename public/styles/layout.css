@@ -1,17 +1,77 @@
-/* Error: expected more input.
- *    ,
- * 87 |  /*
- *    |    ^
- *    '
- *   sass/layout.scss 87:4  root stylesheet */
+/* ^ This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected more input.\a    \2577 \a 87 \2502   /*\a    \2502     ^\a    \2575 \a   sass/layout.scss 87:4  root stylesheet";
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+* Global layout stuff
+*/
+.bold {
+  font-weight: bold;
+}
+
+body {
+  color: #545149;
+  background-color: rgba(244, 241, 236, 0.8);
+  font-size: 1em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body main.container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 auto;
+}
+body .btn-up {
+  color: #FFFFFF;
+  font-size: 19px;
+  line-height: 19px;
+  padding: 19px;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #350066;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+body .btn-up:hover {
+  background-color: #4056A1;
+}
+body .btn-up:active {
+  background-color: #4056A1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main.container {
+    padding-top: 120px;
+    width: 60%;
+    margin-right: 5%;
+  }
+  body .btn-up {
+    font-size: 2em;
+    padding: 0.8em;
+  }
 }

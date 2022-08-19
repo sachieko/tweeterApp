@@ -25,11 +25,23 @@
 }
 .nav-bar .fa-angles-down {
   color: orangered;
+  animation: updown 2s ease infinite;
 }
 .nav-bar .fa-angles-down:hover {
   color: magenta;
 }
 
+@keyframes updown {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
 /* Tablet CSS Below */
 @media only screen and (min-width: 768px) {
   .nav-bar {
