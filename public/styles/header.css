@@ -1,13 +1,13 @@
+/* ^ This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 .user-header {
   display: flex;
-  background-color: #fd3d6a;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-color: #350066;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   color: #FFFFFF;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20vh;
+  padding-top: 120px;
   height: 40vh;
   width: 100vw;
   font-weight: lighter;
@@ -41,8 +41,8 @@
     font-size: large;
   }
   .user-header img {
-    height: 100%;
-    width: 100%;
+    height: 150px;
+    width: 150px;
   }
   .user-header span {
     margin-top: 1.5em;
@@ -51,5 +51,9 @@
 @media only screen and (min-width: 1024px) {
   .user-header {
     margin-top: 12em;
+  }
+  .user-header img {
+    height: 175px;
+    width: 200px;
   }
 }

@@ -1,22 +1,22 @@
+/* ^ This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 .tweet-article {
   border: 0.2em solid #545149;
-  padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   margin-top: 2em;
+  padding: 1em;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: bolder;
 }
 .tweet-article:hover {
   -webkit-box-shadow: 5px 5px 0px 2px #8DA7B4;
   box-shadow: 5px 5px 0px 2px #8DA7B4;
 }
-.tweet-article:hover .handle {
-  font-weight: bolder;
-}
 .tweet-article .tweetp {
   border-bottom: 0.2em solid #545149;
   padding: 1.5em;
   font-weight: bolder;
+  overflow-wrap: break-word;
 }
 .tweet-article .handle {
   justify-self: end;
@@ -36,6 +36,7 @@
 .tweet-article .display-name {
   align-self: center;
   font-weight: normal;
+  padding-left: 1em;
 }
 .tweet-article .icons {
   white-space: no-wrap;
@@ -61,12 +62,32 @@
   font-size: small;
 }
 
+@media only screen and (max-width: 300px) {
+  .tweet-article {
+    font-size: 0.8em;
+  }
+  .tweet-article .tweet-h {
+    display: flex;
+    flex-direction: column;
+  }
+  .tweet-article img {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .tweet-article {
     font-size: 1em;
   }
+  .tweet-article .display-name {
+    font-weight: bolder;
+  }
   .tweet-article img {
     height: 4em;
     width: 3em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tweet-article {
+    font-size: 1.2em;
   }
 }
