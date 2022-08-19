@@ -7,9 +7,11 @@
   height: 120px;
   justify-content: space-between;
   align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
   position: fixed;
-  width: 100%;
-  top: 0px;
+  width: 100vw;
+  top: 0vh;
   font-size: 1.2em;
 }
 .nav-bar .tweet-menu {
