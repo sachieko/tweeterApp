@@ -43,6 +43,10 @@ box-shadow: 5px 5px 0px 2px #8DA7B4;
   font-weight: normal;
 } 
 
+.tweet-article .icons {
+  white-space: no-wrap;
+}
+
 #tweet-container footer {
   font-weight: bolder;
   font-size: smaller;
@@ -62,4 +66,8 @@ color: #ffee00
 
 #tweet-container a {
   text-decoration: none;
+}
+
+.timeago {
+  font-size: small;
 }
