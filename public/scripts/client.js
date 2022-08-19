@@ -52,8 +52,14 @@ $(() => {
   // Initial load of database once document is loaded.
   loadTweets();
 
-  //
-  $('.new-tweet form').on('submit', function(event) {
+  $('.nav-bar .tweet-menu').on('click', function(event) {
+    event.preventDefault();
+    $('#new-tweet').slideToggle('slow');
+    $('#new-tweet textarea').focus();
+  });
+
+  // Will check input for validation and then post the new tweet and reset the textarea and counter
+  $('#new-tweet form').on('submit', function(event) {
     event.preventDefault();
     $('.error-msg').slideUp('slow', () => { // Stop user from seeing error msg swap.
       const inputText = $('#tweet-text').val();
