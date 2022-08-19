@@ -34,6 +34,7 @@ body {
   }
 
   .btn-up {
+    display: none;
     color: $nav-color; 
     font-size: 19px; 
     line-height: 19px; 
@@ -49,8 +50,9 @@ body {
       background-color: $nav-background-color; 
     }
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom:calc(100vh - (95vh));
+    right:calc(100vw - (98vw));
+      /* 100 viewport height minus the height of the button and the height of the bottom position */
   }
 }
 
