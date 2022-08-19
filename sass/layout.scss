@@ -32,6 +32,26 @@ body {
     width: 90vw;
     margin: 0 auto;
   }
+
+  .btn-up {
+    color: $nav-color; 
+    font-size: 19px; 
+    line-height: 19px; 
+    padding: 19px; 
+    border-radius: 50px; 
+    text-decoration: none;
+    background-color: $header-background-color; 
+    background-image: $header-background-image;
+    &:hover {
+      background-image: none;
+    }
+    &:active {
+      background-color: $nav-background-color; 
+    }
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+  }
 }
 
 .column {
@@ -52,9 +72,16 @@ body {
       width: 60%;
       margin-right: 5%;
     }
+    .btn-up {
+      font-size: 2em;
+      padding: 0.8em;
+    }
   }
  }
 
+ // Not current neccessary for resizing, works well on tablet+
+ /*
  @media only screen and (min-width: 1024px) {
 
  }
+ /*
