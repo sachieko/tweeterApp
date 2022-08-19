@@ -6,8 +6,8 @@
 }
 
 .tweet-article:hover {
-  -webkit-box-shadow: 5px 5px 0px 2px #8DA7B4;
-  box-shadow: 5px 5px 0px 2px #8DA7B4;
+-webkit-box-shadow: 5px 5px 0px 2px #8DA7B4; 
+box-shadow: 5px 5px 0px 2px #8DA7B4;
 }
 
 .after {
@@ -41,7 +41,7 @@
 .display-name {
   padding-left: 1em;
   font-weight: normal;
-}
+} 
 
 .tweet-article .icons {
   white-space: no-wrap;
@@ -61,7 +61,7 @@
 }
 
 #tweet-container footer i.fa-solid:hover {
-  color: #ffee00;
+color: #ffee00
 }
 
 #tweet-container a {

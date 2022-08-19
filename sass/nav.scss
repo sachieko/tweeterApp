@@ -17,9 +17,8 @@
   margin-right: 1.5em;
   font-family: "Source Sans Pro", sans-serif;
 }
-
 .nav-bar span {
-  font-family: "Bungee", sans-serif;
+  font-family:  'Bungee', sans-serif;
   margin-left: 1.5em;
 }
 
@@ -37,4 +36,9 @@
     background-color: #4056A1;
   }
 }
+
+
 /* Desktop CSS Below */
+@media only screen and (min-width: 1024px) {
+
+}

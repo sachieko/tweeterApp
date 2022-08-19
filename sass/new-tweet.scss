@@ -1,0 +1,48 @@
+#tweet-text {
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 0.2em solid #545149;
+  resize: none;
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+  box-shadow: none;
+  padding-top: 1em;
+}
+
+.tweet-btn:focus {
+  outline: 0.2em solid #bacfeb;
+  outline-offset: 0.05em;
+}
+
+#tweet-text:hover {
+  resize: none;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+}
+
+.underline {
+  padding-bottom: 0.2em;
+}
+
+.tweet-counter {
+  padding-top: 0.5em;
+  font-family: "Bungee", sans-serif;
+}
+
+.error-msg {
+  display: none;
+  color: crimson;
+  border: 0.2em solid crimson;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0.5em;
+}
