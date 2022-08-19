@@ -17,12 +17,13 @@ $(() => {
     <article class="tweet-article">
     <header class="tweet-h">
       <div>
-        <img src="${user.avatars}><span class="display-name">${user.name}</span>
+        <img src="${user.avatars}" />
+        <span class="display-name">${user.name}</span>
       </div>
       <span class="handle">${user.handle}</span>
     </header>
       <p class="tweetp"></p>
-    <footer class="row apartv">
+    <footer class="tweet-footer">
     <time class="timeago" datetime="${timeCreated.toISOString()}">${$.timeago(timeCreated)}</time> 
       <div class="icons">
         <i class="fa-solid fa-flag fa-sm"></i> <i class="fa-solid fa-retweet fa-sm"></i> <i class="fa-solid fa-heart fa-sm"></i>
