@@ -24,7 +24,7 @@ $(() => {
       <p class="tweetp"></p>
     <footer class="row apartv">
     <time class="timeago" datetime="${timeCreated.toISOString()}">${$.timeago(timeCreated)}</time> 
-      <div>
+      <div class="icons">
         <i class="fa-solid fa-flag fa-sm"></i> <i class="fa-solid fa-retweet fa-sm"></i> <i class="fa-solid fa-heart fa-sm"></i>
       </div>
     </footer>
@@ -63,11 +63,9 @@ $(() => {
         return $('.error-msg').text('😡 Please respect the 140 character limit! Ain\'t no one got time to read all that! 😡').slideDown('slow');
       }
       const newTweetContent = $(this).serialize();
-      $.post("/tweets/", newTweetContent, loadTweets)
-        .then(() => {
-          $('#tweet-text').val(''); // Reset textarea on good tweet.
-          $(this.counter).val(140); // Reset counter on good tweet.
-        });
+      $('#tweet-text').val(''); // Reset textarea on good tweet.
+      $(this.counter).val(140);
+      $.post("/tweets/", newTweetContent, loadTweets);
     });
   });
 });
