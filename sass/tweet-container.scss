@@ -1,73 +1,84 @@
+@import 'variables';
+
 .tweet-article {
-  border: 0.2em solid #545149;
+  border: 0.2em solid $body-color;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 2em;
+  font-family: $body-font;
+  font-size: 1em;
+  &:hover {
+    -webkit-box-shadow: 5px 5px 0px 2px $boxshadow-color; 
+    box-shadow: 5px 5px 0px 2px $boxshadow-color;
+
+    .handle {
+    font-weight: bolder;
+    }
+  }
+
+  .tweetp {
+    border-bottom: 0.2em solid $body-color;
+    padding: 1.5em;
+    font-weight: bolder;
+  }
+
+  .handle {
+    justify-self: end;
+    color: $boxshadow-color;
+    align-self: center;
+  }
+
+  .tweet-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $body-font;
+
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .display-name {
+    align-self: center;
+    font-weight: normal;
+  } 
+  .icons {
+    white-space: no-wrap;
+  }
+  footer {
+    font-weight: bolder;
+    font-size: smaller;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  footer i.fa-solid {
+    color: $nav-background-color;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+  footer i.fa-solid:hover {
+  color: #ffa600;
+  }
+  a {
+    text-decoration: none;
+  }
+  .timeago {
+    font-size:small;
+  }
 }
 
-.tweet-article:hover {
--webkit-box-shadow: 5px 5px 0px 2px #8DA7B4; 
-box-shadow: 5px 5px 0px 2px #8DA7B4;
+@media only screen and (min-width: 768px) {
+  .tweet-article {
+    font-size: 1em;
+
+    img {
+      height: 4em;
+      width: 3em;
+    }
+  }
 }
 
-.after {
-  display: flex;
-  justify-self: end;
-}
+@media only screen and (min-width: 1024px) {
 
-.tweetp {
-  border-bottom: 0.2em solid black;
-  padding: 1.5em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bolder;
-}
-
-.tweet-h {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.tweet-article .handle {
-  justify-self: end;
-  color: #8DA7B4;
-}
-
-.tweet-article:hover .handle {
-  font-weight: bolder;
-}
-
-.display-name {
-  padding-left: 1em;
-  font-weight: normal;
-} 
-
-.tweet-article .icons {
-  white-space: no-wrap;
-}
-
-#tweet-container footer {
-  font-weight: bolder;
-  font-size: smaller;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-#tweet-container footer i.fa-solid {
-  color: #4056A1;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
-}
-
-#tweet-container footer i.fa-solid:hover {
-color: #ffee00
-}
-
-#tweet-container a {
-  text-decoration: none;
-}
-
-.timeago {
-  font-size: small;
 }

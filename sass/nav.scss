@@ -1,39 +1,45 @@
+@import 'variables';
+
 .nav-bar {
   display: flex;
-  background-color: transparent;
-  color: #FFFFFF;
+  background-color: $header-background-color;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  color: $header-color;
   height: 120px;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0px;
-}
 
-.nav-bar .tweet-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 1.5em;
-  font-family: "Source Sans Pro", sans-serif;
-}
-.nav-bar span {
-  font-family:  'Bungee', sans-serif;
-  margin-left: 1.5em;
-}
+  .tweet-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5em;
+    font-family: $nav-font;
+    font-size: 1em;
+  }
 
-.nav-bar .fa-angles-down {
-  color: orangered;
-}
+  span {
+    font-family: $nav-brand-font;
+    margin-left: 1.5em;
+  }
 
-.nav-bar .fa-angles-down:hover {
-  color: magenta;
+  .fa-angles-down {
+    color: orangered;
+    &:hover {
+      color: magenta;
+    }
+  }
 }
 
 /* Tablet CSS Below */
 @media only screen and (min-width: 768px) {
   .nav-bar {
-    background-color: #4056A1;
+    background-color: $nav-background-color;
+    background-image: none;
+    font-size: 1.8em;
   }
 }
 

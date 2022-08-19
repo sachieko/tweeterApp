@@ -1,17 +1,28 @@
+@import 'variables';
+
 #tweet-text {
   background-color: transparent;
   border: 0px;
-  border-bottom: 0.2em solid #545149;
+  border-bottom: 0.2em solid $body-color;
   resize: none;
   outline: none;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: bolder;
   box-shadow: none;
   padding-top: 1em;
+
+}
+
+.tweet-btn {
+ font-family: $header-font;
+ margin-top: 0.5em;
+ background-color: $nav-background-color;
+ color: $nav-color;
+ text-align: center;
+ border: 0px;
 }
 
 .tweet-btn:focus {
-  outline: 0.2em solid #bacfeb;
+  outline: 0.2em solid $boxshadow-color;
   outline-offset: 0.05em;
 }
 
@@ -26,23 +37,31 @@
   justify-content: center;
 }
 
-.counter {
+ .tweet-footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.underline {
-  padding-bottom: 0.2em;
-}
-
-.tweet-counter {
-  padding-top: 0.5em;
-  font-family: "Bungee", sans-serif;
+.counter {
+  font-family: $header-font;
+  margin-top: 0.5em;
 }
 
 .error-msg {
   display: none;
-  color: crimson;
-  border: 0.2em solid crimson;
-  font-family: "Source Sans Pro", sans-serif;
+  color: $error-color;
+  border: 0.2em solid $error-color;
+  font-family: $body-font;
   padding: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .new-tweet {
+    padding-top: 10%;
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
 }
