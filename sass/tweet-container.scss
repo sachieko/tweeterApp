@@ -54,17 +54,21 @@
     justify-content: space-between;
 
   }
+
   footer i.fa-solid {
     color: $nav-background-color;
     padding-left: 0.2em;
     padding-right: 0.2em;
   }
+
   footer i.fa-solid:hover {
-  color: #ffa600;
+    color: $icon-hover-color;
   }
+
   a {
-    text-decoration: none;
+    text-decoration: none; // If someone posted a link.. something to implement later.
   }
+
   .timeago {
     font-size:small;
   }
