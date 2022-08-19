@@ -3,8 +3,7 @@
 .user-header {
   display: flex;
   background-color: $header-background-color;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-image: $header-background-image;
   color: $header-color;
   flex-direction: column;
   align-items: center;
@@ -42,8 +41,8 @@
     position: fixed;
     font-size: large;
     img {
-      height: 100%;
-      width: 100%;
+      height: 150px;
+      width: 150px;
     }
     span {
       margin-top: 1.5em;
@@ -54,5 +53,9 @@
 @media only screen and (min-width: 1024px) {
   .user-header {
     margin-top: 12em;
+    img {
+      height: 175px;
+      width:200px;
+    }
   }
 }

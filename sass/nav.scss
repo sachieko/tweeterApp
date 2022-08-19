@@ -3,7 +3,7 @@
 .nav-bar {
   display: flex;
   background-color: $header-background-color;
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-image: $header-background-image;
   color: $header-color;
   height: 120px;
   justify-content: space-between;
