@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 //
 //This function uses jquery to put a listener on the input, and gets the length of the text in the input textarea, and
-//if that length - char limit is negative the counter element associated with that input turns red.
+//if counter is negative the counter element associated with that the counter elemenets color turns red.
 $(function() {
   const textLimit = function() {
     const $counter = $(this).parent().next().children('.counter');
