@@ -1,6 +1,7 @@
 .nav-bar {
   display: flex;
-  background-color: transparent;
+  background-color: #fd3d6a;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   color: #FFFFFF;
   height: 120px;
   justify-content: space-between;
@@ -9,24 +10,21 @@
   width: 100%;
   top: 0px;
 }
-
 .nav-bar .tweet-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 1.5em;
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
 }
-
 .nav-bar span {
   font-family: "Bungee", sans-serif;
   margin-left: 1.5em;
 }
-
 .nav-bar .fa-angles-down {
   color: orangered;
 }
-
 .nav-bar .fa-angles-down:hover {
   color: magenta;
 }
@@ -35,6 +33,8 @@
 @media only screen and (min-width: 768px) {
   .nav-bar {
     background-color: #4056A1;
+    background-image: none;
+    font-size: 1.8em;
   }
 }
 /* Desktop CSS Below */

@@ -1,13 +1,55 @@
 .user-header {
   display: flex;
-  background-color: #778c00;
+  background-color: #fd3d6a;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-  color: #ffffff;
+  color: #FFFFFF;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 120px;
-  height: 520px;
+  padding-top: 20vh;
+  height: 40vh;
+  width: 100vw;
   font-weight: lighter;
+  font-size: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.user-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-header img {
+  height: 100px;
+  width: 100px;
+  margin: 0;
+}
+.user-header span {
+  font-size: 1em;
+  margin-top: 0.4em;
+}
+
+@media only screen and (min-width: 768px) {
+  .user-header {
+    display: flex;
+    width: 25vw;
+    height: 35vh;
+    padding: 5%;
+    margin-top: 12em;
+    margin-left: 5%;
+    position: fixed;
+    font-size: large;
+  }
+  .user-header img {
+    height: 100%;
+    width: 100%;
+  }
+  .user-header span {
+    margin-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .user-header {
+    margin-top: 12em;
+  }
 }

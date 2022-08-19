@@ -4,14 +4,22 @@
   border-bottom: 0.2em solid #545149;
   resize: none;
   outline: none;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: bolder;
   box-shadow: none;
   padding-top: 1em;
 }
 
+.tweet-btn {
+  font-family: "Bungee", sans-serif;
+  margin-top: 0.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  text-align: center;
+  border: 0px;
+}
+
 .tweet-btn:focus {
-  outline: 0.2em solid #bacfeb;
+  outline: 0.2em solid #8DA7B4;
   outline-offset: 0.05em;
 }
 
@@ -26,17 +34,15 @@
   justify-content: center;
 }
 
-.counter {
+.tweet-footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.underline {
-  padding-bottom: 0.2em;
-}
-
-.tweet-counter {
-  padding-top: 0.5em;
+.counter {
   font-family: "Bungee", sans-serif;
+  margin-top: 0.5em;
 }
 
 .error-msg {
@@ -45,4 +51,11 @@
   border: 0.2em solid crimson;
   font-family: "Source Sans Pro", sans-serif;
   padding: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .new-tweet {
+    padding-top: 10%;
+    font-size: 1.8em;
+  }
 }

@@ -11,42 +11,25 @@ html {
   box-sizing: inherit;
 }
 
+/*
+* Global layout stuff
+*/
 .bold {
   font-weight: bold;
 }
 
-/*
- * Global layout stuff
- */
-.body-class {
+body {
   color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  background-color: rgba(244, 241, 236, 0.8);
+  font-size: 1em;
   font-family: "Source Sans Pro", sans-serif;
 }
-
-.container {
+body main.container {
   display: flex;
   align-content: center;
   flex-direction: column;
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
-}
-
-.bungee {
-  font-family: "Bungee", sans-serif;
-}
-
-.btn {
-  background-color: #4056A1;
-  color: #FFFFFF;
-  border: 0px;
-  text-align: center;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
 }
 
 .column {
@@ -54,10 +37,17 @@ html {
   flex-direction: column;
 }
 
-.apartv {
-  justify-content: space-between;
-}
-
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main.container {
+    padding-top: 120px;
+    width: 60%;
+    margin-right: 5%;
+  }
+}
