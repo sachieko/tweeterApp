@@ -43,7 +43,7 @@ body {
     background-color: $header-background-color; 
     background-image: $header-background-image;
     &:hover {
-      background-image: none;
+      background-color: $nav-background-color;
     }
     &:active {
       background-color: $nav-background-color; 
@@ -63,7 +63,7 @@ body {
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
 
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   body {
     display:flex; 
     flex-wrap: wrap;
@@ -77,11 +77,5 @@ body {
       padding: 0.8em;
     }
   }
- }
+}
 
- // Not current neccessary for resizing, works well on tablet+
- /*
- @media only screen and (min-width: 1024px) {
-
- }
- /*
